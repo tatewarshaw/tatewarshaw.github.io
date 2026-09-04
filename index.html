@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tate.mp3 — backstage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <div class="brand"><span class="led"></span> TATE.MP3</div>
+  <div class="status">● SHOW SYSTEM ONLINE</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="cue">CUE 001 / HOUSE TO HALF</div>
+    <h1>TATE<span>.mp3</span></h1>
+    <p class="tagline">A little corner of the internet from backstage.</p>
+    <button id="go" class="go">GO <small>▶</small></button>
+    <div class="meters" aria-label="audio meters">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </section>
+
+  <section id="console" class="console">
+    <div class="console-head">
+      <span>MAIN CONSOLE</span><span id="clock">00:00:00</span>
+    </div>
+    <div class="grid">
+      <button class="tile sound" data-title="SOUND" data-copy="Cueing, mixing, atmospheres, playback, and the satisfying little moment when everything finally hits GO.">🎧<b>SOUND</b><em>CUE / MIX / PLAYBACK</em></button>
+      <button class="tile projection" data-title="PROJECTION" data-copy="Visuals, screens, projection, and making a stage feel much bigger than it actually is.">📽️<b>PROJECTION</b><em>VIDEO / VISUALS / CUES</em></button>
+      <button class="tile sm" data-title="STAGE MANAGEMENT" data-copy="Standby. Places. GO. Keeping the entire show moving while everyone else is trying not to panic.">🎬<b>STAGE MANAGEMENT</b><em>STANDBY / PLACES / GO</em></button>
+      <button class="tile theater" data-title="THEATER" data-copy="The shows, productions, rehearsals, and backstage moments that make theater worth it.">🎭<b>THEATER</b><em>SHOWS / REHEARSAL / STAGE</em></button>
+      <button class="tile booth" data-title="THE TECH BOOTH" data-copy="The place where cables multiply overnight and a single button can somehow become the most important button in the building.">🛠️<b>THE TECH BOOTH</b><em>GEAR / EXPERIMENTS / CHAOS</em></button>
+      <button class="tile secret" id="secret">?</button>
+    </div>
+  </section>
+
+  <section class="cueboard">
+    <div class="cue-title">LIVE CUE BOARD</div>
+    <div class="cue-row"><span>001</span><b>HOUSE</b><strong>STANDBY</strong></div>
+    <div class="cue-row"><span>002</span><b>SOUND</b><strong>STANDBY</strong></div>
+    <div class="cue-row"><span>003</span><b>PROJECTION</b><strong>STANDBY</strong></div>
+    <div class="cue-row"><span>004</span><b>EVERYTHING</b><strong>GO</strong></div>
+  </section>
+
+  <footer>
+    <span>© TATE.MP3</span>
+    <span>PLEASE DO NOT TOUCH THE CABLES</span>
+  </footer>
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="close">×</button>
+    <div class="modal-cue">CUE SELECTED</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalCopy"></p>
+    <button class="mini-go">STANDBY → GO</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
